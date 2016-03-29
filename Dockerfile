@@ -1,6 +1,6 @@
 FROM node:4.3.0
 # Author / Maintainer
-MAINTAINER Composr Team <support-composr@bq.com >
+MAINTAINER Composr Team <support-composr@bq.com>
 
 WORKDIR /src
 
@@ -20,26 +20,26 @@ ENV PATH node_modules/pm2/bin:$PATH
 
 # Global config environment variable
 
-ENV URL_BASE ''
-ENV RABBITMQ_HOST ''
-ENV RABBITMQ_PASSWORD ''
-ENV RABBITMQ_FORCE_CONNECT true
-ENV RABBITMQ_HEARTBEAT 30
-ENV CREDENTIALS_CLIENT_ID ''
-ENV CREDENTIALS_CLIENT_SECRET ''
-ENV CREDENTIALS_SCOPES ''
-ENV LOG_LEVEL debug
-ENV LOG_FILE ''
-ENV ACCESS_LOG_FILE ''
-ENV RABBITMQ_PORT ''
-ENV RABBITMQ_USERNAME ''
-ENV ACCESS_LOG true
-ENV NRACTIVE false
-ENV NRAPPNAME ''
-ENV NRAPIKEY ''
-ENV NODE_ENV production
-ENV BUNYAN_LOG true
-ENV PORT 3000
+ENV URL_BASE='' \
+    RABBITMQ_HOST='' \
+    RABBITMQ_PASSWORD='' \
+    RABBITMQ_FORCE_CONNECT=true \
+    RABBITMQ_HEARTBEAT=30 \
+    CREDENTIALS_CLIENT_ID='' \
+    CREDENTIALS_CLIENT_SECRET='' \
+    CREDENTIALS_SCOPES='' \
+    LOG_LEVEL='debug' \
+    LOG_FILE='' \
+    ACCESS_LOG_FILE='' \
+    RABBITMQ_PORT='' \
+    RABBITMQ_USERNAME='' \
+    ACCESS_LOG=true \
+    NRACTIVE=false \
+    NRAPPNAME='' \
+    NRAPIKEY='' \
+    NODE_ENV='production' \
+    BUNYAN_LOG=true \
+    PORT=3000
 
 # Expose port
 EXPOSE $PORT
